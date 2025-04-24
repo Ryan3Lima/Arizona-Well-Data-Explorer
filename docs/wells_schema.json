@@ -85,13 +85,13 @@
   },
   {
     "name": "WL_DTW",
-    "description": "Depth to water (distance from land surface to water level).",
+    "description": "Depth to water (distance from land surface to water level in feet).",
     "source": "GWSI original points",
     "functionality": "value (z-coord)"
   },
   {
     "name": "WL_ELEV",
-    "description": "Elevation of the water surface (datum-dependent).",
+    "description": "Elevation of the water surface in feet (datum-dependent).",
     "source": "Computed from DTW + alt",
     "functionality": "value (z-coord)"
   },
