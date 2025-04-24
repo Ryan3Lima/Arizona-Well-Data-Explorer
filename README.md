@@ -21,7 +21,7 @@ This app allows you to:
   
 * Surficial Geology -- [State Geoligic Map Compilation - Geology](https://www.arcgis.com/home/item.html?id=4d9fb5c0a6344407aec56f47a11482b5)
   
-* Major Aquifers -- [Major Aquifers of the USA] (https://www.arcgis.com/home/item.html?id=e049a24713bf4377aa9e8f268f960af4)
+* Major Aquifers -- [Major Aquifers of the USA](https://www.arcgis.com/home/item.html?id=e049a24713bf4377aa9e8f268f960af4)
 
 
 Created by Ryan Lima (ryan.lima@nau.edu) as part of the Arizona Tri-University Recharge Project
