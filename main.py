@@ -102,9 +102,22 @@ st.subheader("Histogram")
 #st.plotly_chart(make_histogram(value_col, selected_group, group_col), use_container_width=True)
 st.plotly_chart(make_histogram(value_col, selected_group, group_col), use_container_width=True, key="histogram")
 
+# Mapping display labels to internal column names
+value_col_display = {
+    "Water Level Elevation": "wl_dtw",
+    "Elevation of Well Bottom": "well_depth"
+}
+
+# Reverse mapping for display
+value_col_labels = list(value_col_display.keys())
+selected_value_label = st.radio("Choose variable to display in 3D plot:", options=value_col_labels)
+
+# Get the internal column name
+value_col = value_col_display[selected_value_label]
 
 st.subheader("3D Scatter Plot")
 #st.plotly_chart(make_scatter_xyz(value_col, selected_group, group_col), use_container_width=True)
+#st.plotly_chart(make_scatter_xyz(value_col, selected_group, group_col), use_container_width=True, key="scatter_xyz")
 st.plotly_chart(make_scatter_xyz(value_col, selected_group, group_col), use_container_width=True, key="scatter_xyz")
 
 # Load metadata
@@ -123,7 +136,17 @@ file_name = f"filtered_wells_{file_safe_group}.csv"
 if selected_group:
     # 3D well depth profile
     st.subheader("3D View of Well Depths")
-    depth_mode = st.radio("Choose vertical extent mode:", options=["wl_dtw", "well_depth"])
+    depth_mode_display = {
+        "Water Level Elevation": "wl_dtw",
+        "Elevation of Well Bottom": "well_depth"
+    }
+
+    # Reverse mapping to display correct label in UI
+    display_labels = list(depth_mode_display.keys())
+    selected_label = st.radio("Choose vertical extent mode:", options=display_labels)
+
+    # Use the internal variable name when calling the function
+    depth_mode = depth_mode_display[selected_label]
     fig = make_well_vertical_plot(
         df,
         metadata=metadata,

@@ -197,7 +197,7 @@ def make_well_vertical_plot(df, metadata=None, selected_group=None, group_col=No
         scene=dict(
             xaxis_title='Longitude',
             yaxis_title='Latitude',
-            zaxis_title='Elevation (m)',
+            zaxis_title='Elevation (Feet)',
         ),
         margin=dict(l=0, r=0, b=0, t=30),
         height=DEFAULT_HEIGHT,
