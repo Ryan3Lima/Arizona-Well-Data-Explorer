@@ -133,6 +133,16 @@ else:
 
 file_name = f"filtered_wells_{file_safe_group}.csv"
 
+st.markdown("### Download Raw Data")
+csv = df.to_csv(index=False).encode('utf-8')
+file_name = f"GWSI_well_data_enriched.csv"
+st.download_button(
+    label="⬇️ Download All Data CSV",
+    data=csv,
+    file_name=file_name,
+    mime='text/csv'
+)
+
 if selected_group:
     # 3D well depth profile
     st.subheader("3D View of Well Depths")
@@ -166,7 +176,7 @@ if selected_group:
     file_safe_group = selected_group.replace(" ", "_").lower()
     file_name = f"filtered_wells_{file_safe_group}.csv"
     st.download_button(
-        label="⬇️ Download CSV",
+        label="⬇️ Download Filtered Data CSV",
         data=csv,
         file_name=file_name,
         mime='text/csv'
