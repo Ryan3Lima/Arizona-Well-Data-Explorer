@@ -13,7 +13,7 @@ This app allows you to:
 **GWSI well data**
 [GWSI Sites 2024](https://hub.arcgis.com/datasets/azwater::gwsi-sites-2024/about)
 
-**Spatially joined to the following Vector layers for sorting and filtering:**
+**Spatially joined to the following vector layers for sorting and filtering:**
 
 * Groundwater Subbasins -- [Arizona Department of Water Resources Groundwater Subbasins](https://gisdata2016-11-18t150447874z-azwater.opendata.arcgis.com/datasets/azwater::groundwater-subbasin/about)
   
